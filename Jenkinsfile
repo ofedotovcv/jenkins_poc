@@ -14,7 +14,7 @@ pipeline {
                     for (changeLogSet in currentBuild.changeSets) { 
                         for (entry in changeLogSet.getItems()) { // for each commit in the detected changes
                             for (file in entry.getAffectedFiles()) {
-                                changedFiles.add(file.getPath().substring(0, path.lastIndexOf("/")+1)) // add changed file to list
+                                changedFiles.add(file.getPath().substring(0, file.getPath().lastIndexOf("/")+1)) // add changed file to list
                             }
                         }
                     }
