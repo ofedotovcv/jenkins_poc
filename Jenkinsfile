@@ -18,7 +18,7 @@ pipeline {
                             }
                         }
                     }
-                    println changedFiles.unique()
+                    println changedFiles.removeAll([null]).unique()
                     
                 }
                 
