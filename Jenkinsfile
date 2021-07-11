@@ -18,7 +18,7 @@ pipeline {
                             }
                         }
                     }
-                    println changedFiles
+                    println changedFiles.unique
                     
                 }
                 
