@@ -8,6 +8,8 @@ pipeline {
             steps { 
                 echo "Build"
                 
+                script {
+                    
                 changedFiles = []
                 for (changeLogSet in currentBuild.changeSets) { 
                     for (entry in changeLogSet.getItems()) { // for each commit in the detected changes
@@ -16,6 +18,9 @@ pipeline {
                         }
                     }
                 }
+                    
+                }
+                
             }
         }
         stage('Test'){
