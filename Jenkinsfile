@@ -18,7 +18,7 @@ pipeline {
                             }
                         }
                     }
-                    println changedFiles.findAll()
+                    println changedFiles.findAll().unique()
                     
                 }
                 
