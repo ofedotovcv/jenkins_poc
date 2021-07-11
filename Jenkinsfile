@@ -18,7 +18,7 @@ pipeline {
                             }
                         }
                     }
-                    println changedFiles.dump()
+                    println changedFiles
                     
                 }
                 
