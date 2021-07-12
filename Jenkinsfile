@@ -20,9 +20,7 @@ pipeline {
                     }
                     changedFiles.findAll().unique().each {
                         stage(it) {
-                           steps {
                                 echo "Test"
-                            }
                         }
                     }
                     
