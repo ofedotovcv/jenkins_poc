@@ -18,20 +18,16 @@ pipeline {
                             }
                         }
                     }
-                    println changedFiles.findAll().unique()
+                    changedFiles.findAll().unique().each {
+                        stage(it) {
+                           steps {
+                                echo "Test"
+                            }
+                        }
+                    }
                     
                 }
                 
-            }
-        }
-        stage('Test'){
-            steps {
-                echo "Test"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "Deploy"
             }
         }
     }
