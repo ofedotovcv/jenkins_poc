@@ -1,8 +1,5 @@
 pipeline { 
     agent any 
-    options {
-        skipStagesAfterUnstable()
-    }
     stages {
         stage('Build') { 
             steps { 
@@ -20,7 +17,7 @@ pipeline {
                     }
                     changedFiles.findAll().unique().each {
                         stage(it) {
-                                echo "Test"
+                                echo "Build $it"
                         }
                     }
                     
