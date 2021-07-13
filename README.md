@@ -1,3 +1,3 @@
 # jenkins_poc
 
-![Screenshot](Screenshot 2021-07-13 at 18.49.26.png)
+![Screenshot](https://raw.githubusercontent.com/ofedotovcv/jenkins_poc/main/Screenshot%202021-07-13%20at%2018.49.26.png)
