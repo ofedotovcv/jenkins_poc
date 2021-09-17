@@ -28,7 +28,7 @@ pipeline {
                         stage(it[0]+" "+it[1]) {
                                 echo it[0] 
                                 echo it[1]
-                                build job: 'job', parameters: [[$class: 'StringParameterValue', name: 'name1', value: it[0]], [$class: 'StringParameterValue', name: 'name2', value: it[1]]]
+                                build job: 'job_main', parameters: [[$class: 'StringParameterValue', name: 'name1', value: it[0]], [$class: 'StringParameterValue', name: 'name2', value: it[1]]]
                         }
                     }
                     
