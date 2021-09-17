@@ -19,7 +19,7 @@ pipeline {
                     }
                     projects.findAll().unique().each {
                         stage(it) {
-                                echo "Build $it"
+                                echo "Build $it "
                         }
                     }
                     
