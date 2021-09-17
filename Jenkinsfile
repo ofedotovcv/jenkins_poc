@@ -25,7 +25,7 @@ pipeline {
                         }
                     }
                     projects.unique().each {
-                        stage(it) {
+                        stage(it[0]+" "+it[1]) {
                                 echo it[0] 
                                 echo it[1]
                         }
