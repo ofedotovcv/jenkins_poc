@@ -18,7 +18,7 @@ pipeline {
 	                                list = f.split("/")
                                     if (list[0] == "SSIS_Projects") {
                                         if ( c == 2 ) {
-                                            projects.add(list[1])
+                                            projects.add([list[1],""])
                                         } else {
                                             projects.add(list[1,2])
                                         }
