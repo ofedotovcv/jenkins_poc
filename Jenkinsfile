@@ -31,7 +31,10 @@ pipeline {
                     }
                     projects.unique().each {
                         stage(it.join(", ")) {
+                            catchError {
                                 build job: 'job_build', parameters: [[$class: 'StringParameterValue', name: 'name1', value: it[0]], [$class: 'StringParameterValue', name: 'name2', value: it[1]]]
+                            }
+                            echo currentBuild.result
                         }
                     }
                     
