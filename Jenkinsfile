@@ -13,10 +13,15 @@ pipeline {
                             for (file in entry.getAffectedFiles()) {
                                 f = file.getPath()
                                 echo f
-                                if (f.count("/") > 2) {
+                                c = f.count("/")
+                                if ( c >= 2) {
 	                                list = f.split("/")
                                     if (list[0] == "SSIS_Projects") {
-    	                                projects.add(list[1,2])
+                                        if ( c == 2 ) {
+                                            projects.add(list[1])
+                                        } else {
+                                            projects.add(list[1,2])
+                                        }
     	                            }
                                 }
                                 //projects.add(file.getPath().substring(0, file.getPath().lastIndexOf("/")>0 ? file.getPath().lastIndexOf("/") : 0 )) // add changed file to list
